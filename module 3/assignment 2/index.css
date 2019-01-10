@@ -1,0 +1,43 @@
+.btn,btn-info btn-sm{
+    color:black;
+}
+
+.btn-info{
+    color:black;
+    background-color: yellow;
+    border-color: black;
+}
+
+.arrowleft{
+    width: 0px;
+    height: 0px;
+    border-top:20px solid transparent;
+    border-bottom:20px solid transparent;
+    border-left:20px solid white;
+    background-color: darkblue;
+}
+
+.arrowright{
+    width: 0px;
+    height: 0px;
+    border-top:20px solid transparent;
+    border-bottom:20px solid transparent;
+    border-left:20px solid darkblue;
+}
+
+.quiz{
+    border:25px solid lightblue;
+    padding:25px;
+}
+
+.header{
+    height: 40px;
+    text-align: right;
+    display: flex;
+}
+
+.footer{
+    text-align: right;
+    background-color: lightblue;
+    height: 40px;
+}
