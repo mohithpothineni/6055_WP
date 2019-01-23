@@ -1,0 +1,46 @@
+.head1 {
+    text-align: right;
+    height: 40px;
+    display: flex;
+}
+.s1 {
+    background-color: darkblue;
+    width: 50px;
+}
+.s2 {
+    font-size: 16px;
+    width: 200px;
+    background-color: white;
+    margin-right: 10px;
+}
+.right-arrow {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid darkblue;
+}
+.left-arrow {
+    background-color: darkblue;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+}
+.window {
+    border: 25px solid lightblue;
+    padding: 25px;
+}
+.w2 {
+    text-align: right;
+    background-color: lightblue;
+    height: 40px;
+}
+.break {
+    height: 25px;
+}
+
+#text {
+    color: darkblue;
+}
