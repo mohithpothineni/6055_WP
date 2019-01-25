@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Feedback Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="check.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div id="m_form" class="container">
+  <h2>Feedback form</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input  class="form-control" id="name" placeholder="Enter name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="comment">comment:</label>
+      <input class="form-control" id="comment" placeholder="Enter comment" name="comment">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Secret Key:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter secret key" name="pwd">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="button" class="btn btn-default" onclick=checkinputs('name','comment','pwd','comments','errormsg')>Post Comment</button>
+  </form>
+  <br>
+  <label id="errormsg"></label>
+</div>
+
+<br>
+
+
+
+
+<div class="container">
+  <label>Recent Comments:</label>
+</div>
+
+
+
+<!-- recent comments
+!-->
+<div id="comments" class="container">
+  
+</div>
+
+
+
+
+
+
+</body>
+</html>
