@@ -5,7 +5,7 @@ comments=[];
 names=[]
 
 function checkinputs(nameid,commentid,keyid,commnetboxid,errorbox_id) {
-    clear_error_msg(errorbox_id);
+    //clear_error_msg(errorbox_id);
     ele_n = document.getElementById(nameid);
     ele_c = document.getElementById(commentid);
     ele_key = document.getElementById(keyid);
