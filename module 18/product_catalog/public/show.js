@@ -43,11 +43,10 @@ function delete_(id) {
 
 }
 
-
-function edit_(indexx) {
-    var title = prompt("enter title")
-    var des = prompt("enter description")
-    var quantity = prompt("enter quantity")
+function ajaxndreloader(indexx) {
+    var title = document.getElementById("i"+indexx).value;
+    var des = document.getElementById("j"+indexx).value;
+    var quantity = document.getElementById("k"+indexx).value;
 
     if (title == "") {
         title = jsobject.products[indexx].title;
@@ -70,6 +69,59 @@ function edit_(indexx) {
   xhttp.open("GET", "/edit/"+indexx+"-"+title+"-"+des+"-"+quantity, false);
   xhttp.send();
   location.reload();
+} 
+
+
+
+
+function form_generator(indexx) {
+    var elem_ = document.getElementById(indexx);
+    var f = document.createElement("form");
+    f.setAttribute("id","f"+indexx);
+    f.style.setProperty("display","none")
+
+
+    var i = document.createElement("input"); //input element, text
+    i.setAttribute('type',"text");
+    i.setAttribute('name',"title");
+    i.setAttribute('value',"title")
+    i.setAttribute("id","i"+indexx)
+
+    var j = document.createElement("input"); //input element, text
+    j.setAttribute('type',"text");
+    j.setAttribute('name',"description");
+    j.setAttribute('value',"description")
+    j.setAttribute("id","j"+indexx)
+    
+    var k = document.createElement("input"); //input element, text
+    k.setAttribute('type',"text");
+    k.setAttribute('name',"quantity");
+    k.setAttribute("id","k"+indexx)
+    k.setAttribute('value',"quantity")
+
+    var s = document.createElement("input"); //input element, Submit button
+    s.setAttribute('type',"button");
+    s.setAttribute('value',"Submit");
+    s.addEventListener("click",()=>{ajaxndreloader(indexx)})
+
+    f.appendChild(i);
+    f.appendChild(document.createElement("br"));
+    f.appendChild(j);
+    f.appendChild(document.createElement("br"));
+    f.appendChild(k);
+    f.appendChild(document.createElement("br"));
+    f.appendChild(s);
+
+    elem_.appendChild(f)
+
+}
+
+
+
+function edit_(indexx) {
+    var elel = document.getElementById("f"+indexx);
+    elel.style.setProperty("display","");
+    
 }
 
 
@@ -119,6 +171,9 @@ function helper_generator(container,arr_,indexx) {
     var br = document.createElement("br");
     container.appendChild(br);
     container.appendChild(div);
+
+    form_generator(indexx);
+    
 }
 
 
